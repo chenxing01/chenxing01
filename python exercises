@@ -130,10 +130,11 @@ D=input()
 list=D.split(",")
 result=[]
 for i in list:
-    Q=round(math.sqrt(2 * C * float(i)/H))
+    Q=str(round(math.sqrt(2 * C * float(i)/H)))
     result.append(Q)
-print(result)
+print(",".join(result))
 # round（x，n）方法将返回x的值，该值四舍五入到小数点后的n位数字。默认的小数位数为 0，表示该函数将返回最接近的整数。
+# join() 方法，它是 split() 方法的逆方法，它会将列表（或元组）中多个字符串采用固定的分隔符连接在一起。
 
 Question 7
 Question:
@@ -180,6 +181,42 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
 Solution:
+lines = []
+while True:
+    s = input()
+    if s:
+        lines.append(s.upper())
+    else:
+        break;
+for sentence in lines:
+    print(sentence)
+# while True无限循环
+
+Question 10
+Question:
+Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing all duplicate words and sorting them alphanumerically.
+Suppose the following input is supplied to the program:
+hello world and practice makes perfect and hello world again
+Then, the output should be:
+again and hello makes perfect practice world
+
+Hints:
+In case of input data being supplied to the question, it should be assumed to be a console input.
+We use set container to remove duplicated data automatically and then use sorted() to sort the data.
+
+Solution:
+words=input()
+list=words.split(" ")
+li=[]
+for i in range(len(list)-1):
+    if list[i] not in li:
+        li.append(list[i])
+print(" ".join(li))
+# 创建一个新的列表，添加元素
+
+
+
+
 
 
 
