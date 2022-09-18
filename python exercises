@@ -139,7 +139,7 @@ print(",".join(result))
 Question 7
 Question:
 Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional array. The element value in the i-th row and j-th column of the array should be i*j.
-Note: i=0,1.., X-1; j=0,1,¡Y-1.
+Note: i=0,1,……,X-1; j=0,1,……,Y-1.
 Example
 Suppose the following inputs are given to the program:
 3,5
@@ -150,6 +150,14 @@ Hints:
 Note: In case of input data being supplied to the question, it should be assumed to be a console input in a comma-separated form.
 
 Solution:
+x=int(input("请输入x： "))
+y=int(input("请输入y： "))
+list=[[0 for i in range(y)] for j in range(x)]
+for i in range(x):
+    for j in range(y):
+        list[i][j]=i*j
+print(list)
+# list=[[0 for i in range(y)] for j in range(x)]?
 
 Question 8
 Question:
